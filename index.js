@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
-const formRoutes = require("./routes/routeForm"); // Use the correct variable name
+const formRoutes = require("./routes/routeForm");
 
 dotenv.config();
 
@@ -17,7 +17,7 @@ app.use(express.json());
 connectDB();
 
 // Routes
-app.use("/api/forms", formRoutes); // Use the correct variable name
+app.use("/api/forms", formRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
